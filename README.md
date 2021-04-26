@@ -1,2 +1,3 @@
-# ggt-nuclearER
-Software to play escape room with the theme of a Nuclear Power Plant for the Gruppo Giovani di Terlago 
+# Escape Room - Centrale Nucleare
+
+Software per giocare all'escape room "Centrale Nucleare" del Gruppo Giovani di Terlago
