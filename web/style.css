@@ -8,7 +8,7 @@ body {
   background-color: #333333;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
   padding: 50px 70px;
 }
 .container {
@@ -20,7 +20,7 @@ body {
   height: 90%;
   background-color: #555555;
 }
-.header {
+header {
   padding: 0.75rem 0;
   width: 100%;
   background-color: #444444;
@@ -56,11 +56,20 @@ body {
       0 0 45px rgba(109, 189, 30, 0.7), 0 0 65px rgba(109, 189, 30, 0.9);
   }
 }
-
-.main {
+main {
+  position: relative;
   width: 100%;
   height: inherit;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -107,4 +116,71 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
+}
+.off_container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #6dbd1e;
+  text-shadow: 0 0 5px rgba(109, 189, 30, 0.1), 0 0 15px rgba(109, 189, 30, 0.6);
+}
+.off_container img {
+  margin-top: 30px;
+  width: 100px;
+  height: 100px;
+  image-rendering: pixelated;
+  filter: invert(58%) sepia(96%) saturate(412%) hue-rotate(47deg)
+    brightness(94%) contrast(83%);
+  text-shadow: 0 0 5px rgba(109, 189, 30, 0.1), 0 0 15px rgba(109, 189, 30, 0.6);
+}
+.off_container img:hover {
+  filter: invert(58%) sepia(96%) saturate(412%) hue-rotate(47deg)
+    brightness(94%) contrast(83%) drop-shadow(0 0 30px rgba(109, 189, 30, 0.4))
+    drop-shadow(0 0 60px rgba(109, 189, 30, 0.7));
+}
+.exit_container {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #6dbd1e;
+  text-shadow: 0 0 5px rgba(109, 189, 30, 0.1), 0 0 15px rgba(109, 189, 30, 0.6);
+}
+.exit_container img {
+  margin-top: 30px;
+  width: 100px;
+  height: 100px;
+  image-rendering: pixelated;
+  filter: invert(58%) sepia(96%) saturate(412%) hue-rotate(47deg)
+    brightness(94%) contrast(83%);
+  text-shadow: 0 0 5px rgba(109, 189, 30, 0.1), 0 0 15px rgba(109, 189, 30, 0.6);
+}
+.exit_container img:hover {
+  filter: invert(58%) sepia(96%) saturate(412%) hue-rotate(47deg)
+    brightness(94%) contrast(83%) drop-shadow(0 0 30px rgba(109, 189, 30, 0.4))
+    drop-shadow(0 0 60px rgba(109, 189, 30, 0.7));
+}
+.active {
+  display: flex;
+}
+footer {
+  padding-top: 1px;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+footer span {
+  text-transform: uppercase;
 }
