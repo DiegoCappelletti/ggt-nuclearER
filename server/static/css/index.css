@@ -7,9 +7,11 @@
 body {
   background-color: #333333;
   width: 100%;
-  height: 100%;
-  /*overflow: hidden;*/
-  padding: 50px 70px;
+  height: 100vh;
+  overflow: hidden;
+}
+img {
+  image-rendering: pixelated;
 }
 .container {
   position: absolute;
@@ -64,15 +66,18 @@ main {
   align-items: center;
   justify-content: center;
 }
-.main_container {
+.section {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   display: none;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+.main_container {
+  flex-direction: row;
 }
 .btn {
   position: relative;
@@ -98,7 +103,6 @@ main {
   position: absolute;
   top: 20px;
   padding: 5px;
-  image-rendering: pixelated;
 }
 .icona img {
   height: 60px;
@@ -118,14 +122,8 @@ main {
   justify-content: center;
 }
 .off_container {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
+  width: 75%;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: 50px;
   color: #6dbd1e;
   text-shadow: 0 0 5px rgba(109, 189, 30, 0.1), 0 0 15px rgba(109, 189, 30, 0.6);
@@ -134,7 +132,7 @@ main {
   margin-top: 30px;
   width: 100px;
   height: 100px;
-  image-rendering: pixelated;
+  cursor: pointer;
   filter: invert(58%) sepia(96%) saturate(412%) hue-rotate(47deg)
     brightness(94%) contrast(83%);
   text-shadow: 0 0 5px rgba(109, 189, 30, 0.1), 0 0 15px rgba(109, 189, 30, 0.6);
@@ -145,15 +143,8 @@ main {
     drop-shadow(0 0 60px rgba(109, 189, 30, 0.7));
 }
 .exit_container {
-  position: absolute;
-  top: 0;
-  width: 80%;
-  height: 100%;
-  display: none;
+  width: 75%;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
   font-size: 50px;
   color: #6dbd1e;
   text-shadow: 0 0 5px rgba(109, 189, 30, 0.1), 0 0 15px rgba(109, 189, 30, 0.6);
@@ -162,7 +153,7 @@ main {
   margin-top: 30px;
   width: 100px;
   height: 100px;
-  image-rendering: pixelated;
+  cursor: pointer;
   filter: invert(58%) sepia(96%) saturate(412%) hue-rotate(47deg)
     brightness(94%) contrast(83%);
   text-shadow: 0 0 5px rgba(109, 189, 30, 0.1), 0 0 15px rgba(109, 189, 30, 0.6);
@@ -172,6 +163,69 @@ main {
     brightness(94%) contrast(83%) drop-shadow(0 0 30px rgba(109, 189, 30, 0.4))
     drop-shadow(0 0 60px rgba(109, 189, 30, 0.7));
 }
+.loginID,
+.loginPWD {
+  top: 50px;
+  width: 75%;
+  flex-direction: column;
+  font-size: 50px;
+  color: #6dbd1e;
+  text-shadow: 0 0 5px rgba(109, 189, 30, 0.1), 0 0 15px rgba(109, 189, 30, 0.6);
+}
+.undo {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  height: 30px;
+  cursor: pointer;
+}
+.loginID .form,
+.loginPWD .form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.loginID .form input,
+.loginPWD .form input {
+  width: 400px;
+  background: #444444;
+  border: solid 2px #333333;
+  color: #e2e2e2;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.loginID .form img,
+.loginPWD .form img {
+  margin-left: 10px;
+  height: 55px;
+  width: 55px;
+  cursor: pointer;
+  filter: none;
+}
+.loginID .form img:hover,
+.loginPWD .form img:hover {
+  filter: invert(58%) sepia(96%) saturate(412%) hue-rotate(47deg)
+    brightness(74%) contrast(83%) drop-shadow(0 0 10px rgba(109, 189, 30, 0.2))
+    drop-shadow(0 0 30px rgba(109, 189, 30, 0.7));
+}
+.commento {
+  margin-top: 50px;
+  width: 120%;
+  height: 400px;
+  background: transparent;
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+.commento div {
+  margin-top: 20px;
+}
+.russo {
+  font-size: 20px;
+}
 .active {
   display: flex;
 }
@@ -180,7 +234,4 @@ footer {
   color: #ffffff;
   font-size: 15px;
   letter-spacing: 1px;
-}
-footer span {
-  text-transform: uppercase;
 }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room Nuclear Reactor</title>
+    <link rel="stylesheet" href="./css/index.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./font/font.css" type="text/css" charset="utf-8">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title">Vallelaghi Energy Product</div>
+            <div class="subtitle">Terlago</div>
+        </header>
+        <main id="main">
+            <div class="section main_container active">
+                <div class="btn" onclick=login()>
+                    <div class="icona"><img src="./icons/logIn.png"></div>
+                    <div class="text">Login</div>
+                </div>
+                <div class="btn" onclick=spegniCentrale()>
+                    <div class="icona"><img src="./icons/off.png"></div>
+                    <div class="text">Spegni Centrale</div>
+                </div>
+                <div class="btn" onclick=exit()>
+                    <div class="icona"><img src="./icons/door_exit.png"></div>
+                    <div class="text">Exit</div>
+                </div>
+            </div> 
+            <div class="section off_container">
+                <div>Credevi fosse così facile?</div>
+                <div>Devi fare LogIn per spegnere la centrale.</div>
+                <img src="./icons/arrow_left.png" onclick=home()>
+            </div>
+            <div class="section exit_container">
+                <div>Questo è uno dei pochi casi in cui spegnere e riaccendere non risolve il problema!</div>
+                <img src="../icons/arrow_left.png" onclick=home()>
+            </div>
+            <div class="section loginID">
+                <img src="./icons/arrow_left.png" class="undo" onclick=home()>
+                <label for="id">Inserire ID utente:</label>
+                <div class="form">
+                    <input type="text" id="inputId" name="id">
+                    <img src="./icons/arrow_right.png" onclick=checkID()>
+                </div>
+                <div class="commento comm_id"></div>
+            </div>
+            <div class="section loginPWD">
+                <img src="./icons/arrow_left.png" class="undo" onclick=home()>
+                <label for="pwd">Inserire la Password:</label>
+                <div class="form">
+                    <input type="text" id="inputPwd" name="pwd">
+                    <img src="./icons/arrow_right.png" onclick=checkPassword()>
+                </div>
+                <div class="commento comm_pwd"></div>
+            </div>
+        </main>
+        <footer>
+            <div>Licenza sul Materiale - Proprietà GGT - @gruppogiovaniditerlago &copy; GGTerlago 2018-2021</div>
+        </footer>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
