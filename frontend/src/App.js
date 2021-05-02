@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+
+import Start from './components/start'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <header>
+        <div className="title">Vallelaghi Energy Product</div>
+        <div className="subtitle">Terlago</div>
+      </header> 
+      <main>
+        <Start></Start>
+      </main>
+      <footer>
+      <div>Licenza sul Materiale - Proprietà GGT - @gruppogiovaniditerlago &copy; GGTerlago 2018-2021</div>
+      </footer>    
     </div>
   );
 }
