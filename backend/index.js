@@ -1,6 +1,9 @@
 import express from 'express';
+import dotenv from 'dotenv'
 import routeApp from './app.js'
 import cors from 'cors';
+
+dotenv.config({path: './config.env'})
 
 const app = express();
 
@@ -17,6 +20,7 @@ app.use((req, res) => {
 });
 
 const port = process.env.PORT || 5555;
+
 app.listen(port,() => {
     console.log(`Server running at ${port} port...`)
 })
