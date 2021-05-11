@@ -5,51 +5,39 @@ import {fetchLogin} from '../api/index';
 function Login() {
 
     useEffect(() => {
-        fetchData();
+        //fetchData();
     },[])
 
     const [id, setId] = useState(false);
     const [frase, setFrase] = useState("");
-    const [txt, setTxt] = useState();
-    const [value, setValue] = useState();
-    const [pws, setPws] = useState();
+    const [value, setValue] = useState("");
+    const [pws, setPws] = useState("");
 
-    const fetchData = async ()=>{
-        const data = await fetchLogin();
-        setTxt(data.data.modal[0]);
-    };
-
-    const checkUsername = () => {
-        switch(value){
-            case "524810":
-                setFrase(txt.russa);
-                break;
-            case "123456":
-                setFrase(txt.ita);
-                break;
-            case "MITICO":
-                setFrase(txt.homer);
-                break;
-            case "734256":
-                setId(true)
-                setFrase("")
-                break;
-            default:
-                setFrase("Username Errato!");
-                break;
+    const checkUsername = async () => {
+        
+        const res = await fetchLogin("id",value);
+        
+        if(res.data.msg=="ok"){
+            setId(true)
+            setFrase("")
+        }else{
+            setFrase(res.data.msg);
         }
+        
         setValue("")
         setPws("")
     }
-    const checkPws = () => {
-        switch(pws){
-            case "coHw&4oM":
-                window.location.href = "http://localhost:3000/main";
-                break;
-            default:
-                setFrase("Password Errata!");
-                break;
+    const checkPws = async () => {
+
+        const res = await fetchLogin("password",pws);
+        
+        if(res.data.msg=="ok"){
+            window.location.href = "http://localhost:3000/main";
+        }else{
+            setFrase(res.data.msg);
         }
+        
+        setValue("")
         setPws("")
     }
     
@@ -156,4 +144,5 @@ const Msg = styled.div`
     color: var(--main-txt-color);
     letter-spacing: 1px;
     line-height: 1.9rem;
+    overflow-y: scroll;
 `

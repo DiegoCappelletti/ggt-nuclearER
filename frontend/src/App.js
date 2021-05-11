@@ -5,6 +5,7 @@ import styled, { keyframes } from 'styled-components';
 import Start from './components/Start';
 import Inizio from './components/Inizio';
 import Login from './components/Login';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route exact path="/" component={Start} />
             <Route exact path="/inizio" component={Inizio} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/main" component={Home} />
           </Switch>
         </Main>
         <Footer>

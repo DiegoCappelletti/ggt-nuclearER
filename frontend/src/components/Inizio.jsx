@@ -17,7 +17,7 @@ function Inizio() {
 
     const fetchData = async ()=>{
         const data = await fetchInizio();
-        setTxt(data.data.modal[0]);
+        setTxt(data.data.modal);
     };
 
     const sowModal = (i) => {
