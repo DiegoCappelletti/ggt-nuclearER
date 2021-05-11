@@ -1,12 +1,8 @@
-import React,{ useState, useEffect } from 'react'
+import React,{ useState } from 'react'
 import styled from 'styled-components';
 import {fetchLogin} from '../api/index';
 
 function Login() {
-
-    useEffect(() => {
-        //fetchData();
-    },[])
 
     const [id, setId] = useState(false);
     const [frase, setFrase] = useState("");
@@ -41,7 +37,6 @@ function Login() {
         setPws("")
     }
     
-
     return (
         <>
         {!id ? (
@@ -145,4 +140,5 @@ const Msg = styled.div`
     letter-spacing: 1px;
     line-height: 1.9rem;
     overflow-y: scroll;
+    white-space: pre-wrap;
 `

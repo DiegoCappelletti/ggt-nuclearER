@@ -52,4 +52,13 @@ routerApp.get('/login', function(req,res){
     
 });
 
+//richiesta dati delle mail
+routerApp.get('/mail', function(req,res){
+    res.status(200).json({success: true, mail: data.mail});
+});
+//richiesta dati delle note
+routerApp.get('/note', function(req,res){
+    res.status(200).json({success: true, note: data.note});
+});
+
 export default routerApp;

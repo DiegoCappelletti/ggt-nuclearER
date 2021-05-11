@@ -13,3 +13,8 @@ export const fetchLogin = (type, value) => axios.get(urlHome + 'login', {
         value: value,
     }
 });
+
+//richiesta delle mail
+export const fetchMail = () => axios.get(urlHome + 'mail');
+//richiesta delle note
+export const fetchNote = () => axios.get(urlHome + 'note');
