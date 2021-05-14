@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Mail from './Mail'
 import Note from './Note'
 
+let index = 1000;
+
 export default class Window extends Component{
     constructor(props){
         super(props);
@@ -11,12 +13,14 @@ export default class Window extends Component{
             diffX: 0,
             diffY: 0,
             dragging: false,
-            styles: {}
+            styles: {},
+            z: index++
         }
 
         this.dragStart = this.dragStart.bind(this);
         this.isDragging = this.isDragging.bind(this);
         this.dragEnd = this.dragEnd.bind(this);
+        this.focus = this.focus.bind(this);
     }
 
     dragStart(e){
@@ -44,10 +48,18 @@ export default class Window extends Component{
             dragging: false
         });
     }
+    focus(e){
+        if(this.state.z != index){
+            this.setState({
+                z: index++
+            })
+            e.currentTarget.style.zIndex = index;
+        }
+    }
 
     render(){
         return (
-            <Container style={this.state.styles}>
+            <Container style={this.state.styles} onMouseDown={this.focus}>
                 <Header onMouseDown={this.dragStart} onMouseMove={this.isDragging} onMouseUp={this.dragEnd}>
                     <Titolo>{this.props.nome}</Titolo>
                     <Close onClick={this.props.click}/>
@@ -62,7 +74,7 @@ export default class Window extends Component{
 
 const Container = styled.div`
     position: absolute;
-    height: 550px;
+    height: 600px;
     width: 800px;
     background: #666666;
     border-bottom: solid 5px #222222;
@@ -100,5 +112,5 @@ const Close = styled.div`
 `
 const Main = styled.div`
     width: 100%;
-    height: 505px;
+    height: 555px;
 `

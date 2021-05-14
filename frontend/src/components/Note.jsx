@@ -82,6 +82,7 @@ const Nota = styled.div`
     left: ${props => props.left};
     width: 400px;
     height: 400px;
+    color: #333333;
     background: #dddddd;
     border-radius: 10px;
     transition: 0.5s all linear;
@@ -90,6 +91,7 @@ const Nota = styled.div`
 const Data = styled.h1`
     font-size: 40px;
     margin-bottom: 50px;
+    color: #00aa00;
 `
 const Testo = styled.p`
     font-size: 25px;

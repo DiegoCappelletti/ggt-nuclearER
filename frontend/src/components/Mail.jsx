@@ -79,8 +79,8 @@ const Table = styled.table`
 const HeaderTable = styled.thead`
     text-transform: uppercase;
     text-align: center;
-    font-size: 30px;
-    color: white;
+    font-size: 40px;
+    color: #00aa00;
 `
 const BodyTable = styled.tbody`
     text-align: left;
@@ -122,16 +122,19 @@ const Indietro = styled.div`
 const Oggetto = styled.h1`
     margin-bottom: 40px;
     font-size: 55px;
+    color: #00aa00;
 `
 const Mittente = styled.h2`
     font-size: 35px;
+    font-weight: 100;
 `
 const Destinatario = styled.h2`
     font-size: 35px;
+    font-weight: 100;
 `
 const MailText = styled.p`
     margin-top: 70px;
     width: 70%;
-    font-size: 20px;
+    font-size: 23px;
     white-space: pre-wrap;
 `

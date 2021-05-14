@@ -52,7 +52,7 @@ const Header = styled.header`
 const pulse = keyframes`
   0%,
   100% {
-    color: #ffffff;
+    color: #cccccc;;
     text-shadow: none;
   }
   50% {

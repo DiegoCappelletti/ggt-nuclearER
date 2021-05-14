@@ -1,7 +1,7 @@
 :root {
-  --main-txt-color: #6dbd1e;
-  --main-txt-shadow: 0 0 15px rgba(109, 189, 30, 0.7),
-    0 0 35px rgba(109, 189, 30, 0.5), 0 0 100px rgba(109, 189, 30, 0.7);
+  --main-txt-color: #00aa00;
+  --main-txt-shadow: 0 0 15px rgba(0, 170, 0, 0.7),
+    0 0 35px rgba(0, 170, 0, 0.5), 0 0 100px rgba(0, 170, 0, 0.7);
   --emergency-txt-color: #ff0000;
   --emergency-txt-shadow: 0 0 15px rgba(255, 0, 0, 0.2),
     0 0 35px rgba(255, 0, 0, 0.3), 0 0 75px rgba(255, 0, 0, 0.6);
@@ -21,6 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #cccccc;
 }
 
 /* scrollbar */
@@ -36,4 +37,19 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #222222;
+}
+
+/* WinBox */
+.wb-title {
+  color: #00aa00;
+  font-family: vt323regular, sans-serif;
+  font-size: 25px;
+}
+.wb-body {
+  background: #666666;
+}
+
+/* -------- */
+.hidden {
+  display: none;
 }

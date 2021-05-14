@@ -50,8 +50,7 @@ const ButtonImg = styled.img`
     image-rendering: pixelated;
 
     ${Container}:hover & {
-        filter: invert(58%) sepia(96%) saturate(412%) hue-rotate(47deg)
-            brightness(94%) contrast(83%);
+        filter: invert(38%) sepia(78%) saturate(2088%) hue-rotate(91deg) brightness(97%) contrast(107%);
     }
 `
 const Text = styled.h3`
