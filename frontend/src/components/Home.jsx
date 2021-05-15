@@ -1,7 +1,7 @@
 import React,{useState}  from 'react'
 import styled from 'styled-components';
 import Button from './Button'
-import Window from './Window'
+import WindowHome from './WindowHome'
 
 function Home() {
 
@@ -34,8 +34,8 @@ function Home() {
                 <Button name="Exit" scr='/icon/door_exit.png' to="/inizio"/>
             </ButtonContainer>
             {/* type=true significa mail, type=false significa note */}
-            {mail && (<Window nome={"Nuclear-Mail"} type={true} click={()=>{close(0)}}/>)}
-            {note && (<Window nome={"Note Personali"} type={false} click={()=>{close(1)}}/>)}
+            {mail && (<WindowHome nome={"Nuclear-Mail"} type={true} click={()=>{close(0)}}/>)}
+            {note && (<WindowHome nome={"Note Personali"} type={false} click={()=>{close(1)}}/>)}
         </Container>
     )
 }

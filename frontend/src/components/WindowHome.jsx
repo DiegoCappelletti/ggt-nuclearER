@@ -5,7 +5,7 @@ import Note from './Note'
 
 let index = 1000;
 
-export default class Window extends Component{
+export default class WindowMain extends Component{
     constructor(props){
         super(props);
 

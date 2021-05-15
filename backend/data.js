@@ -1,4 +1,5 @@
 export default{
+    stato: "ATTIVO",
     inizio: {
         spegnimentoCentrale: "Credevi fosse così facile? Devi fare LogIn per spegnere la centrale.",
         exit: "Questo è uno dei pochi casi in cui spegnere e riaccendere non risolve il problema!",
@@ -59,6 +60,43 @@ export default{
             nome: "nota 5",
             data: "05/06/2021",
             nota: "Credo che il nuovo staggista giapponese sia un'impostore!! L'ho visto usare una calcolatrice!! Esistono le calcolatrici in giappone? Non fanno tutto a mente?? Homer ha mangiato 12 ciambelle questa mattina."
+        },
+    ],
+    orari:[
+        {
+            mansione: "LogIn",
+            ora: "08:30",
+            codice: "001"
+        },
+        {
+            mansione: "Controllo orari, mail, note",
+            ora: "08:45",
+            codice: "010"
+        },
+        {
+            mansione: "Controllo barre plutoni reattore 3",
+            ora: "09:30",
+            codice: "011"
+        },
+        {
+            mansione: "Pausa pranzo",
+            ora: "15:00",
+            codice: "100"
+        },
+        {
+            mansione: "Controllare Homer",
+            ora: "15:15",
+            codice: "101"
+        },
+        {
+            mansione: "Riposizionamento barre plutonio reattore 3",
+            ora: "15:30",
+            codice: "110"
+        },
+        {
+            mansione: "Fine turno",
+            ora: "22:00",
+            codice: "111"
         },
     ]
 };

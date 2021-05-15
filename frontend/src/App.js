@@ -6,6 +6,10 @@ import Start from './components/Start';
 import Inizio from './components/Inizio';
 import Login from './components/Login';
 import Home from './components/Home';
+import Mansioni from './components/Mansioni';
+import ConAutomatico from './components/ConAutomatico';
+import ConManuale from './components/ConManuale';
+import Procedura from './components/Procedura';
 
 function App() {
   return (
@@ -21,6 +25,10 @@ function App() {
             <Route exact path="/inizio" component={Inizio} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/main" component={Home} />
+            <Route exact path="/mansioni" component={Mansioni} />
+            <Route exact path="/automatico" component={ConAutomatico} />
+            <Route exact path="/manuale" component={ConManuale} />
+            <Route exact path="/procedura" component={Procedura} />
           </Switch>
         </Main>
         <Footer>

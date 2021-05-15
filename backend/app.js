@@ -60,5 +60,14 @@ routerApp.get('/mail', function(req,res){
 routerApp.get('/note', function(req,res){
     res.status(200).json({success: true, note: data.note});
 });
+//richiesta dati degli orari
+routerApp.get('/orari', function(req,res){
+    res.status(200).json({success: true, orari: data.orari});
+});
+
+//richiesta stato
+routerApp.get('/stato', function(req,res){
+    res.status(200).json({success: true, stato: data.stato});
+});
 
 export default routerApp;

@@ -18,3 +18,8 @@ export const fetchLogin = (type, value) => axios.get(urlHome + 'login', {
 export const fetchMail = () => axios.get(urlHome + 'mail');
 //richiesta delle note
 export const fetchNote = () => axios.get(urlHome + 'note');
+//richiesta degli orari
+export const fetchOrari = () => axios.get(urlHome + 'orari');
+
+//richiesta degli orari
+export const fetchStato = () => axios.get(urlHome + 'stato');
