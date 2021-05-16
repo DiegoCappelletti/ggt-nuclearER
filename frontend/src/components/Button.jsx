@@ -47,10 +47,10 @@ const Container = styled.div`
 const ButtonImg = styled.img`
     height: 75px;
     width: 75px;
-    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 
     ${Container}:hover & {
-        filter: invert(38%) sepia(78%) saturate(2088%) hue-rotate(91deg) brightness(97%) contrast(107%);
+        filter: var(--main-filter);
     }
 `
 const Text = styled.h3`

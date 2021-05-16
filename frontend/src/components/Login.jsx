@@ -105,7 +105,7 @@ const Input = styled.input`
     width: 70%;
     margin: 20px;
     padding: 5px;
-    color: #d4d4d4;
+    color: #cccccc;
     font-size: 50px;
     background: #333333;
     text-align: center;
@@ -117,6 +117,7 @@ const Button = styled.button`
     background: #333333;
     text-transform: uppercase;
     font-size: 30px;
+    color: #cccccc;
 
     &:hover{
         color: var(--main-txt-color);

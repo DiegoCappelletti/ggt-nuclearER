@@ -26,7 +26,7 @@ const Container = styled.div`
 const pulse = keyframes`
   0%,
   100% {
-    color: #ffffff;
+    color: #cccccc;
     text-shadow: none;
   }
   50% {

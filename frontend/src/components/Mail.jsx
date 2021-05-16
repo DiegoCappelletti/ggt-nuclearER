@@ -122,7 +122,7 @@ const Indietro = styled.div`
 const Oggetto = styled.h1`
     margin-bottom: 40px;
     font-size: 55px;
-    color: #00aa00;
+    color: var(-main-txt-color);
 `
 const Mittente = styled.h2`
     font-size: 35px;

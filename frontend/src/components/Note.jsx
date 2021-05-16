@@ -91,7 +91,7 @@ const Nota = styled.div`
 const Data = styled.h1`
     font-size: 40px;
     margin-bottom: 50px;
-    color: #00aa00;
+    color: var(--main-txt-color);
 `
 const Testo = styled.p`
     font-size: 25px;

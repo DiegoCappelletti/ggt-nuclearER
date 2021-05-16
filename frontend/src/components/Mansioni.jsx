@@ -94,7 +94,7 @@ const ManualContainer = styled.div`
 const ManualImage = styled.img`
     width: 40px;
     height: 40px;
-    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 
     ${ManualContainer}:hover & {
         filter: var(--main-filter);
