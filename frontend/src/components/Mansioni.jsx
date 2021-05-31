@@ -1,32 +1,38 @@
 import React,{useState}  from 'react'
 import styled from 'styled-components';
 import Button from './Button'
-import WindowMansioni from './WindowMansioni'
 import Modal from './Modal'
+import Orari from './Orari'
+import Manuale from './Manuale'
 import { fetchStato } from '../api';
 
 function Mansioni() {
 
-    const [orari, setOrari] = useState(false);
-    const [manuale, setManuale] = useState(false);
     const [modal, setModal] = useState(false);
 
     const showOrari = () => {
-        setOrari(true)
+        new WinBox("Orari",{
+            class: ["no-full","no-resize"],
+            background: "#444444",
+            width: "50%",
+            height: "70%",
+            x: "center",
+            y: "center",
+            mount: document.getElementById("orari").firstChild
+        })
     } 
     const showManuale = () => {
-        setManuale(true)
+        new WinBox("Orari",{
+            class: ["no-full","no-resize"],
+            background: "#444444",
+            width: "50%",
+            height: "70%",
+            x: "center",
+            y: "center",
+            mount: document.getElementById("man").firstChild
+        })
     }
-    const close = (i) => {
-        switch(i){
-            case 0:
-                setOrari(false); 
-                break;
-            case 1:
-                setManuale(false); 
-                break;
-        }
-    }
+
     const checkStato = async() => {
         const data = await fetchStato();
         const stato = data.data.stato;
@@ -48,10 +54,9 @@ function Mansioni() {
             <ManualContainer onClick={showManuale}>
                 <ManualImage src='/icon/manual.png'/>
             </ManualContainer>
-            {/* type=0 significa orari, type=1 significa manuale */}
-            {orari && (<WindowMansioni nome={"Orari"} type={0} click={()=>{close(0)}}/>)}
-            {manuale && (<WindowMansioni nome={"Manuale di emergenza"} type={1} click={()=>{close(1)}}/>)}
             {modal && (<Modal text={"Per procedere bisogna spegnere il controllo automatico"} click={()=>{setModal(false)}}/>)}
+            <div id="orari" className="hidden"><Orari/></div>
+            <div id="man" className="hidden"><Manuale/></div>
         </Container>
     )
 }
@@ -94,7 +99,6 @@ const ManualContainer = styled.div`
 const ManualImage = styled.img`
     width: 40px;
     height: 40px;
-    image-rendering: crisp-edges;
 
     ${ManualContainer}:hover & {
         filter: var(--main-filter);

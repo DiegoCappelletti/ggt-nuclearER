@@ -6,6 +6,8 @@ import Start from './components/Start';
 import Inizio from './components/Inizio';
 import Login from './components/Login';
 import Home from './components/Home';
+import Mail from './components/Mail';
+import Note from './components/Note';
 import Mansioni from './components/Mansioni';
 import ConAutomatico from './components/ConAutomatico';
 import ConManuale from './components/ConManuale';
@@ -25,6 +27,8 @@ function App() {
             <Route exact path="/inizio" component={Inizio} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/main" component={Home} />
+            <Route exact path="/mail" component={Mail} />
+            <Route exact path="/note" component={Note} />
             <Route exact path="/mansioni" component={Mansioni} />
             <Route exact path="/automatico" component={ConAutomatico} />
             <Route exact path="/manuale" component={ConManuale} />

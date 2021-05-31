@@ -47,7 +47,6 @@ const Container = styled.div`
 const ButtonImg = styled.img`
     height: 75px;
     width: 75px;
-    image-rendering: crisp-edges;
 
     ${Container}:hover & {
         filter: var(--main-filter);

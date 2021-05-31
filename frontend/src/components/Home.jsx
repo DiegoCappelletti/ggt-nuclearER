@@ -1,41 +1,16 @@
-import React,{useState}  from 'react'
+import React  from 'react'
 import styled from 'styled-components';
 import Button from './Button'
-import WindowHome from './WindowHome'
 
 function Home() {
-
-    const [mail, setMail] = useState(false);
-    const [note, setNote] = useState(false);
-
-    const showMail = () => {
-        setMail(true)
-    } 
-    const showNote = () => {
-        setNote(true)
-    }
-    const close = (i) => {
-        switch(i){
-            case 0:
-                setMail(false); 
-                break;
-            case 1:
-                setNote(false); 
-                break;
-        }
-    }
-
     return (
         <Container>
             <ButtonContainer>
                 <Button name="Mansioni Odierne" scr='/icon/workflow.png' to="/mansioni"/>
-                <Button name="Nuclear Mail" scr='/icon/mail.png' onclick={showMail}/>
-                <Button name="Note" scr='/icon/note.png' onclick={showNote}/>
+                <Button name="Nuclear Mail" scr='/icon/mail.png' to="/mail"/>
+                <Button name="Note" scr='/icon/note.png' to="/note"/>
                 <Button name="Exit" scr='/icon/door_exit.png' to="/inizio"/>
             </ButtonContainer>
-            {/* type=true significa mail, type=false significa note */}
-            {mail && (<WindowHome nome={"Nuclear-Mail"} type={true} click={()=>{close(0)}}/>)}
-            {note && (<WindowHome nome={"Note Personali"} type={false} click={()=>{close(1)}}/>)}
         </Container>
     )
 }

@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react'
 import styled from 'styled-components';
 import { fetchNote } from '../api';
+import {Link} from 'react-router-dom';
 
 function Note() {
 
@@ -9,26 +10,29 @@ function Note() {
     },[])
 
     const [note, setNote] = useState([]);
-    const [xNote, setXNote] = useState(1000); //350
+    const [xNote, setXNote] = useState(1500); //350
     const [text, setText] = useState({});
 
     const fetchData = async ()=>{
         const data = await fetchNote();
         setNote(data.data.note);
+        console.log("ok")
     };
 
     const noteText = (text) => {
-        if(xNote==1000){
-            setXNote(350);
+        console.log(xNote)
+        if(xNote==1500){
+            setXNote(500);
             setText(text);
         }else{
-            setXNote(1000);
+            setXNote(1500);
             setText("");
         }
     }
 
     return (
         <Container>
+            <Link to="/main"><Indietro/></Link>
             <Table>
                 <BodyTable>
                     {note.map((n,i) => (
@@ -49,15 +53,30 @@ function Note() {
 export default Note
 
 const Container = styled.div`
+    padding: 10rem;
     position: relative;
     height: 100%;
     width: 100%;
     overflow: hidden;
 `
+const Indietro = styled.div`
+    top: 60px;
+    left: 60px;
+    position:absolute;
+    width: 60px;
+    height:60px;
+    background-image: url("/icon/arrow_left.png");
+    image-rendering: pixelated;
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+    &:hover{
+        filter: var(--main-filter);
+    }
+`
 const Table = styled.table`
-    position: absolute;
-    top: 40px;
-    left: 50px;
     border-collapse: collapse;
 `
 const BodyTable = styled.tbody`
@@ -78,15 +97,15 @@ const Campo = styled.th`
 const Nota = styled.div`
     padding: 50px;
     position: absolute;
-    top: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
     left: ${props => props.left};
-    width: 400px;
-    height: 400px;
+    width: 45%;
+    height: 75%;
     color: #333333;
     background: #dddddd;
     border-radius: 10px;
     transition: 0.5s all linear;
-    overflow-y: scroll;
 `
 const Data = styled.h1`
     font-size: 40px;

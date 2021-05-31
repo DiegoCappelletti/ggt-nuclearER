@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react'
 import styled from 'styled-components';
 import { fetchMail } from '../api';
+import {Link} from 'react-router-dom';
 
 function Mail() {
 
@@ -30,24 +31,27 @@ function Mail() {
     return (
         <Container>
             {!showMail ? (
-                <Table>
-                    <HeaderTable>
-                        <Riga>
-                            <Campo>Mittente</Campo>
-                            <Campo>Destinatario</Campo>
-                            <Campo>Oggetto</Campo>
-                        </Riga>
-                    </HeaderTable>
-                    <BodyTable>
-                        {mail.map((m,i) => (
-                            <Riga key={i} onClick={()=>{mailText(m)}}>
-                                <Campo>{m.da}</Campo>
-                                <Campo>{m.a}</Campo>
-                                <Campo>{m.oggetto}</Campo>
+                <>
+                    <Link to="/main"><Indietro/></Link>
+                    <Table>
+                        <HeaderTable>
+                            <Riga>
+                                <Campo>Mittente</Campo>
+                                <Campo>Destinatario</Campo>
+                                <Campo>Oggetto</Campo>
                             </Riga>
-                        ))}
-                    </BodyTable>
-                </Table>
+                        </HeaderTable>
+                        <BodyTable>
+                            {mail.map((m,i) => (
+                                <Riga key={i} onClick={()=>{mailText(m)}}>
+                                    <Campo>{m.da}</Campo>
+                                    <Campo>{m.a}</Campo>
+                                    <Campo>{m.oggetto}</Campo>
+                                </Riga>
+                            ))}
+                        </BodyTable>
+                    </Table>
+                </>
             ) : (
                 <MailContainer>
                     <Indietro onClick={()=>{closeMail()}}/>
@@ -65,6 +69,7 @@ function Mail() {
 export default Mail
 
 const Container = styled.div`
+    position:relative;
     height: 100%;
     width: 100%;
 `
@@ -108,16 +113,20 @@ const MailContainer = styled.div`
 `
 const Indietro = styled.div`
     top: 60px;
-    left: 30px;
+    left: 60px;
     position:absolute;
-    width: 30px;
-    height:30px;
+    width: 60px;
+    height:60px;
     background-image: url("/icon/arrow_left.png");
     image-rendering: pixelated;
-    background-size: 30px 30px;
+    background-size: 60px 60px;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+
+    &:hover{
+        filter: var(--main-filter);
+    }
 `
 const Oggetto = styled.h1`
     margin-bottom: 40px;
@@ -134,7 +143,8 @@ const Destinatario = styled.h2`
 `
 const MailText = styled.p`
     margin-top: 70px;
-    width: 70%;
+    width: 60%;
     font-size: 23px;
     white-space: pre-wrap;
+    text-align: center;
 `
