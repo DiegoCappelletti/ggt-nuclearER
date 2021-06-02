@@ -1,4 +1,5 @@
-import React,{useState}  from 'react'
+import React,{useState, useEffect}  from 'react'
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import Button from './Button'
 import Modal from './Modal'
@@ -8,7 +9,22 @@ import { fetchStato } from '../api';
 
 function Mansioni() {
 
+    const [stato, setStato] = useState();
     const [modal, setModal] = useState(false);
+
+    useEffect(()=>{
+        fetchData()
+    },[])
+
+    const fetchData = async() => {
+        const data = await fetchStato();
+        setStato(data.data.stato);
+        if(data.data.stato == "ATTIVO")
+            document.body.classList.remove("emergency");
+        else
+            document.body.classList.add("emergency");
+        
+    }
 
     const showOrari = () => {
         new WinBox("Orari",{
@@ -22,7 +38,7 @@ function Mansioni() {
         })
     } 
     const showManuale = () => {
-        new WinBox("Orari",{
+        new WinBox("Manuale di Emergenza",{
             class: ["no-full","no-resize"],
             background: "#444444",
             width: "50%",
@@ -34,17 +50,17 @@ function Mansioni() {
     }
 
     const checkStato = async() => {
-        const data = await fetchStato();
-        const stato = data.data.stato;
-        if(stato == "ATTIVO"){
+        fetchData();
+        if(stato == "ATTIVO")
             setModal(true);
-        }else{
-            window.location.href = "http://localhost:3000/manuale";
-        }
+        else
+            document.getElementById("manuale").click();
+        
     }
 
     return (
         <Container>
+            <Link to="/manuale" id="manuale"/>
             <ButtonContainer>
                 <Button name="Controllo Automatico" scr='/icon/gears.png' to="/automatico"/>
                 <Button name="Controllo Manuale" scr='/icon/power_plant.png' onclick={checkStato}/>

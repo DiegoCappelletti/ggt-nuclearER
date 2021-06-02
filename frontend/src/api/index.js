@@ -21,5 +21,11 @@ export const fetchNote = () => axios.get(urlHome + 'note');
 //richiesta degli orari
 export const fetchOrari = () => axios.get(urlHome + 'orari');
 
-//richiesta degli orari
+//richiesta stato
 export const fetchStato = () => axios.get(urlHome + 'stato');
+//modifica stato
+export const fetchSpegni = () => axios.get(urlHome + 'spegni');
+//modifica stato
+export const fetchRisposta = () => axios.get(urlHome + 'risposta');
+//modifica stato
+export const fetchConvalida = () => axios.get(urlHome + 'convalida');

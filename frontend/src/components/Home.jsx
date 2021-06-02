@@ -9,7 +9,7 @@ function Home() {
                 <Button name="Mansioni Odierne" scr='/icon/workflow.png' to="/mansioni"/>
                 <Button name="Nuclear Mail" scr='/icon/mail.png' to="/mail"/>
                 <Button name="Note" scr='/icon/note.png' to="/note"/>
-                <Button name="Exit" scr='/icon/door_exit.png' to="/inizio"/>
+                <Button name="LogOut" scr='/icon/logOut.png' to="/inizio"/>
             </ButtonContainer>
         </Container>
     )

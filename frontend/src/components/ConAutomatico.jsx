@@ -51,11 +51,11 @@ function Start() {
       <Link to="/procedura" id="procedura"/>
       <Text>STATO: {stato}</Text>
       <ButtonContainer onClick={checkAcceso} acceso>
-          <ButtonImg src="/icon/off.png"/>
+          <ButtonImg a src="/icon/off.png"/>
           <ButtonText acceso>Accendi</ButtonText>
       </ButtonContainer>
       <ButtonContainer onClick={checkSpento}>
-          <ButtonImg src="/icon/off.png"/>
+          <ButtonImg b src="/icon/off.png"/>
           <ButtonText>Spegni</ButtonText>
       </ButtonContainer>
       {modal && (<Modal text={frase} click={hiddenModal}/>)}
@@ -81,8 +81,6 @@ const Text = styled.h4`
   font-weight: 200;
   color: var(--main-txt-color);
 `
-const shadowRed = "box-shadow: 0 0 15px rgba(255, 0, 0, 0.2), 0 0 35px rgba(255, 0, 0, 0.3), 0 0 75px rgba(255, 0, 0, 0.6);";
-const shadowGreen = "box-shadow: 0 0 15px rgba(0, 170, 0, 0.7), 0 0 35px rgba(0, 170, 0, 0.5), 0 0 100px rgba(0, 170, 0, 0.7);";
 const ButtonContainer = styled.div`
     margin: 40px;
     padding: 20px;
@@ -99,13 +97,17 @@ const ButtonContainer = styled.div`
     background: #333333;
 
     &:hover{
-      ${props => props.acceso ? shadowGreen : shadowRed};
-        cursor: pointer;
+      box-shadow: var(--main-txt-shadow);
+      cursor: pointer;
     }
 `
 const ButtonImg = styled.img`
     height: 75px;
     width: 75px;
+
+    ${ButtonContainer}:hover &{
+      filter: var(--main-filter);
+    }
 `
 const colorRed = "color: #ff0000;";
 const colorGreen = "color: #00aa00;";

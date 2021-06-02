@@ -20,7 +20,7 @@ function Inizio() {
         setTxt(data.data.modal);
     };
 
-    const sowModal = (i) => {
+    const showModal = (i) => {
         setModal(true)
         switch(i){
             case 0:
@@ -39,10 +39,10 @@ function Inizio() {
     }
 
     const spegnimentoCentrale = () => {
-        sowModal(0);
+        showModal(0);
     }
     const exit = () => {
-        sowModal(1);
+        showModal(1);
     }
 
   return (

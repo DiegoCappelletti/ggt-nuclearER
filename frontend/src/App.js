@@ -12,6 +12,10 @@ import Mansioni from './components/Mansioni';
 import ConAutomatico from './components/ConAutomatico';
 import ConManuale from './components/ConManuale';
 import Procedura from './components/Procedura';
+import HomeManuale from './components/HomeManuale';
+import Protocollo from './components/Protocollo';
+import Domanda from './components/Domanda';
+import Fine from './components/Fine';
 
 function App() {
   return (
@@ -33,6 +37,10 @@ function App() {
             <Route exact path="/automatico" component={ConAutomatico} />
             <Route exact path="/manuale" component={ConManuale} />
             <Route exact path="/procedura" component={Procedura} />
+            <Route exact path="/controllo-manuale" component={HomeManuale} />
+            <Route exact path="/protocollo" component={Protocollo} />
+            <Route exact path="/domanda" component={Domanda} />
+            <Route exact path="/fine" component={Fine} />
           </Switch>
         </Main>
         <Footer>

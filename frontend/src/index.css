@@ -52,7 +52,7 @@ a {
 
 /* WinBox */
 .wb-title {
-  color: #00aa00;
+  color: var(--main-txt-color);
   font-family: vt323regular, sans-serif;
   font-size: 25px;
 }

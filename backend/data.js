@@ -1,5 +1,4 @@
 export default{
-    stato: "ATTIVO",
     inizio: {
         spegnimentoCentrale: "Credevi fosse così facile? Devi fare LogIn per spegnere la centrale.",
         exit: "Questo è uno dei pochi casi in cui spegnere e riaccendere non risolve il problema!",
@@ -58,6 +57,11 @@ export default{
         },
         {
             nome: "nota 5",
+            data: "11/06/2021",
+            nota: "Questa mattina mi è caduta la tessera della console di comando allinterno del reattore 3! Spero non mi scoprano, non ho idea di come tirarla fuori..."
+        },
+        {
+            nome: "nota 6",
             data: "05/06/2021",
             nota: "Credo che il nuovo staggista giapponese sia un'impostore!! L'ho visto usare una calcolatrice!! Esistono le calcolatrici in giappone? Non fanno tutto a mente?? Homer ha mangiato 12 ciambelle questa mattina."
         },
@@ -74,7 +78,7 @@ export default{
             codice: "010"
         },
         {
-            mansione: "Controllo barre plutoni reattore 3",
+            mansione: "Controllo barre plutonio reattore 3",
             ora: "09:30",
             codice: "011"
         },
