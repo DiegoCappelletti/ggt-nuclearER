@@ -1,6 +1,7 @@
 import React,{ useState } from 'react'
 import styled from 'styled-components';
 import {fetchLogin} from '../api/index';
+import {Link} from 'react-router-dom';
 
 function Login() {
 
@@ -28,7 +29,7 @@ function Login() {
         const res = await fetchLogin("password",pws);
         
         if(res.data.msg=="ok"){
-            window.location.href = "http://localhost:3000/main";
+            document.getElementById("main").click();
         }else{
             setFrase(res.data.msg);
         }
@@ -39,6 +40,7 @@ function Login() {
     
     return (
         <>
+        <Link to="/main" id="main"/>
         {!id ? (
             <Container>
                 <FormContainer>
