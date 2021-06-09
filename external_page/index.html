@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proiettore</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8">
+</head>
+<body>
+    <div class="container">
+        <div class="desktop">
+            <div class="finestra">
+                <div class="wHeader"><div class="exit"></div></div>
+                <div class="terraContainer">
+                    <div class="planet planetEarth">
+                        <div class="planetContainer">
+                            <div class="loader"><span></span></div>
+                            <div class="earth"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="finestra">
+                <div class="wHeader"><div class="exit"></div></div>
+                <div class="trentoContainer">
+                    <div class="mirino"></div>
+                </div>
+            </div>
+            <div class="finestra">
+                <div class="wHeader"><div class="exit"></div></div>
+                <h1>741893526</h1>
+            </div>
+            <div class="finestra">
+                <div class="wHeader"><div class="exit"></div></div>
+                <p class="countdown">30:00:00</p>
+            </div>
+        </div>
+        <div class="strumenti">
+            <div class="appIcon"></div>
+            <div class="appIcon"></div>
+            <div class="appIcon"></div>
+            <div class="appIcon"></div>
+            <div class="appIcon"></div>
+        </div>
+    </div>  
+    <div class="video hidden">
+        <video id="video" src="explosion.mp4"></video>
+    </div> 
+    <audio id="allarme" src="allarme.mp3"></audio>
+    <script src="app.js"></script>
+</body>
+</html>
