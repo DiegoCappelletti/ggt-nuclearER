@@ -70,6 +70,7 @@ body {
   background: url(./icon/close.png) no-repeat center;
 }
 .finestra h1 {
+  color: #dddddd;
   font-size: 2.5rem;
   transform: rotate(7deg) translate(25%, 300%);
 }

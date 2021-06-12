@@ -7,7 +7,7 @@ const container = document.querySelector('.container');
 const videoContainer = document.querySelector('.video')
 const countdownEl = document.querySelector('.countdown');
 const video = document.getElementById('video')
-const allarm = document.getElementById('allarme')
+const allarm = new Audio('./allarme.mp3')
 allarm.loop = true;
 
 function updateCountdown(){

@@ -5,21 +5,21 @@ export default{
     },
     login: {
         russa: "Президент не нанимал вас на эту работу, спецназовец Романов. Возвращайтесь, чтобы украсть ценную информацию у грязных капиталистов, которые угрожают нашей стране. Слава Арстотцке!\n\nIl Presidente non ti ha incaricata per questo lavoro, soldato speciale Romanov. Torna a sottrare preziose informazioni ai sporchi capitalisti che minacciano il nostro paese. Gloria ad Arstotzka!",
-        ita: "",
-        homer: "Homer, quante volte bisogna dirtelo che non puoi accedere al sistema? Di sicuro non dopo che hai rovescito il caffè mentre inzuppavi una ciambella mandando in corto il qudro elettrico e rischiando di provocare un disaastro nucleare!!! Torna a non fare le tua mansioni.",
+        ita: "Ciao ||, Don Corleone la sta aspettando al cantiere. Ha un nuovo paio di scarpe da farti provare. Se lo farai atendere potrebbe essere l'ultim volta, ah no lo sarà lo stesso. Buona nuotata.",
+        homer: "Homer, quante volte bisogna dirtelo che non puoi accedere al sistema? Di sicuro non dopo che hai rovescito il caffè mentre inzuppavi una ciambella mandando in corto il quadro elettrico e rischiando di provocare un disastro nucleare!!! Torna a non fare le tua mansioni.",
     },
     mail: [
         {
             da: "risorse.umane@n-mail.val",
             a: "@tutti",
             oggetto: "Chi ha sporcato il bagno?",
-            mail: "Invito gentilmente chiunque abbia usato il bagno al 3° piano, di predentarsi presso l'ufficio delle risorse umane per risponere del fatto che quando si producono più scorie del seattore 4 sarebbe gradito che venga tirata l'acqua!",
+            mail: "Invito gentilmente chiunque abbia usato il bagno al 3° piano, di presentarsi presso l'ufficio delle risorse umane per risponere del fatto che quando si producono più scorie del reattore 4 sarebbe gradito che venga tirata l'acqua!",
         },
         {
             da: "conferma.ordine@siberia.taiwan",
             a: "steven.olsson@gmail.com",
             oggetto: "Ordine Siberia.com",
-            mail: "Gentile cliente, la informiamo che abbiamospedito i suoi articoli. Il suo pacco arriverà in 14843 giorni lavorativi. La ringraziamo per aver scelto i nostro sito per i suoi acquisti. \n\nDettagio ordine: \n-Mutande con pizza nere taglia XXL:\t\tx7\t19,99€ \n-Pelliccia copripollice in pettirosso:\t\tx1\t73,45€ \n-Dizionario Mandarino/Ghanese per espeerti:\tx1\t3,89€",
+            mail: "Gentile cliente, la informiamo che abbiamo spedito i suoi articoli. Il suo pacco arriverà in 14843 giorni lavorativi. La ringraziamo per aver scelto il nostro sito per i suoi acquisti. \n\nDettagio ordine: \n-Mutande con pizzo nere taglia XXL:\t\tx7\t19,99€ \n-Pelliccia copripollice in pettirosso:\t\tx1\t73,45€ \n-Dizionario Mandarino/Ghanese per espeerti:\tx1\t3,89€",
         },
         {
             da: "ufficio.tecnico@n-mail.val",
@@ -29,7 +29,7 @@ export default{
         },
         {
             da: "pierfranco@n-mail.val",
-            a: "@tutti",
+            a: "@tutti, ivan.giardiniere@n-main.val",
             oggetto: "Festa a sorpresa",
             mail: "Ricordo a tutti che prossimo lunedì è il compleanno di Ivan il giardiniere. La festa a sorpresa si terrà quel giorno dopo il turno del pomeriggio all' 1:30. Mi raccomando, massima segretezza!",
         },
@@ -58,7 +58,7 @@ export default{
         {
             nome: "nota 5",
             data: "11/06/2021",
-            nota: "Questa mattina mi è caduta la tessera della console di comando allinterno del reattore 3! Spero non mi scoprano, non ho idea di come tirarla fuori..."
+            nota: "Questa mattina mi è caduta la tessera della console di comando all'interno del reattore 3! Spero non mi scoprano, non ho idea di come tirarla fuori..."
         },
         {
             nome: "nota 6",
