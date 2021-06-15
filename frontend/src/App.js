@@ -9,6 +9,7 @@ import Home from './components/Home';
 import Mail from './components/Mail';
 import Note from './components/Note';
 import Mansioni from './components/Mansioni';
+import Reattore from './components/Reattore';
 import ConAutomatico from './components/ConAutomatico';
 import ConManuale from './components/ConManuale';
 import Procedura from './components/Procedura';
@@ -36,6 +37,7 @@ function App() {
             <Route exact path="/mansioni" component={Mansioni} />
             <Route exact path="/automatico" component={ConAutomatico} />
             <Route exact path="/manuale" component={ConManuale} />
+            <Route exact path="/reattore" component={Reattore} />
             <Route exact path="/procedura" component={Procedura} />
             <Route exact path="/controllo-manuale" component={HomeManuale} />
             <Route exact path="/protocollo" component={Protocollo} />

@@ -5,7 +5,7 @@ export default{
     },
     login: {
         russa: "Президент не нанимал вас на эту работу, спецназовец Романов. Возвращайтесь, чтобы украсть ценную информацию у грязных капиталистов, которые угрожают нашей стране. Слава Арстотцке!\n\nIl Presidente non ti ha incaricata per questo lavoro, soldato speciale Romanov. Torna a sottrare preziose informazioni ai sporchi capitalisti che minacciano il nostro paese. Gloria ad Arstotzka!",
-        ita: "Ciao ||, Don Corleone la sta aspettando al cantiere. Ha un nuovo paio di scarpe da farti provare. Se lo farai atendere potrebbe essere l'ultim volta, ah no lo sarà lo stesso. Buona nuotata.",
+        ita: "Ciao Alfredo, Don Corleone la sta aspettando al cantiere. Ha un nuovo paio di scarpe da farti provare. Se lo farai atendere potrebbe essere l'ultim volta, ah no lo sarà lo stesso. Buona nuotata.",
         homer: "Homer, quante volte bisogna dirtelo che non puoi accedere al sistema? Di sicuro non dopo che hai rovescito il caffè mentre inzuppavi una ciambella mandando in corto il quadro elettrico e rischiando di provocare un disastro nucleare!!! Torna a non fare le tua mansioni.",
     },
     mail: [
@@ -24,8 +24,8 @@ export default{
         {
             da: "ufficio.tecnico@n-mail.val",
             a: "steven.olsson@n-mail.val",
-            oggetto: "Cambio codice",
-            mail: "Il nuovo codice per accedere al reattore 3 è il seguente: 1234",
+            oggetto: "Cambio combinazione",
+            mail: "La informiamo che la combianazione per il riposizionamneto delle barre del reattore 3 è stato cambiato.\nLa nuova combinazione è: \n",
         },
         {
             da: "pierfranco@n-mail.val",

@@ -62,6 +62,7 @@ function Mansioni() {
         <Container>
             <Link to="/manuale" id="manuale"/>
             <ButtonContainer>
+                <Button name="Reattore 3" scr='/icon/bars2.png' to="/reattore"/>
                 <Button name="Controllo Automatico" scr='/icon/gears.png' to="/automatico"/>
                 <Button name="Controllo Manuale" scr='/icon/power_plant.png' onclick={checkStato}/>
                 <Button name="Orari" scr='/icon/clock.png' onclick={showOrari}/>
