@@ -129,8 +129,9 @@ const Indietro = styled.div`
     }
 `
 const Oggetto = styled.h1`
+    max-width: 60%;
     margin-bottom: 40px;
-    font-size: 55px;
+    font-size: 60px;
     color: var(-main-txt-color);
 `
 const Mittente = styled.h2`
@@ -143,8 +144,8 @@ const Destinatario = styled.h2`
 `
 const MailText = styled.p`
     margin-top: 70px;
-    width: 60%;
-    font-size: 23px;
+    width: 70%;
+    font-size: 28px;
     white-space: pre-wrap;
     text-align: center;
 `

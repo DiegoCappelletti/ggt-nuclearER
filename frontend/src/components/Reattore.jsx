@@ -1,6 +1,7 @@
 import React,{ useState } from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
+
 function Reattore() {
 
   const [combinazione, setCombinazione] = useState(false);
@@ -23,7 +24,11 @@ function Reattore() {
           <Button onClick={check}>Risposta</Button>
         </>
         ) : (
-          <>Immagine</>
+          <>
+            <Immagine src="combinazione.jpg"/>
+            <Leggenda1>Accesso reattore</Leggenda1>
+            <Leggenda2>Accesso reattore</Leggenda2>
+          </>
         )
       }
     </Container>
@@ -92,4 +97,21 @@ const Button = styled.div`
   &:hover{
     background: #222222;
   }
+`
+const Immagine = styled.img`
+  height: 85%;
+`
+const Leggenda1 = styled.h4`
+  position: absolute;
+  color: #222222;
+  font-size: 40px;
+  left: 30px;
+  transform: rotate(-90deg);
+`
+const Leggenda2 = styled.h4`
+  position: absolute;
+  color: #222222;
+  font-size: 40px;
+  right: 30px;
+  transform: rotate(90deg);
 `

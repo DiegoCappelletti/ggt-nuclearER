@@ -33,6 +33,12 @@ export default{
             oggetto: "Festa a sorpresa",
             mail: "Ricordo a tutti che prossimo lunedì è il compleanno di Ivan il giardiniere. La festa a sorpresa si terrà quel giorno dopo il turno del pomeriggio all' 1:30. Mi raccomando, massima segretezza!",
         },
+        {
+            da: "info@zadrainterni.it",
+            a: "",
+            oggetto: "Arredamento per la casa, moderno e su misura in Trentino-Alto Adige",
+            mail: "Raccontare una storia attraverso le mani di un uomo.\nEsplorare le infinite possibilità della materia pensando con il cuore.\nAttendere con ansia il momento di rientrare a casa\nper rivedere i propri cari e ascoltare il profumo del legno naturale.\n…non vendiamo semplici arredi ma un modo di sognare!\n\nIl design più ricercato si fonde all'umanità del legno,\narrediamo secondo i vostri sogni...\n\nTelefono/fax: +39 0463 468470\nFacebook: facebook.com/Rustiklegno/\n\nVia del Plan del Sant, 8 38012 Mollaro, Predaia TN",
+        },
     ],
     note:[
         {

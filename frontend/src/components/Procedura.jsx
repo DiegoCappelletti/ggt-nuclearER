@@ -8,10 +8,6 @@ function Procedura() {
   const [stato, setStato] = useState("");
   const [value, setValue] = useState("");
 
-  useEffect(() => {
-    fetchData();
-  },[])
-
   const fetchData = async ()=>{
     const data = await fetchSpegni();
     setStato(data.data.stato);
