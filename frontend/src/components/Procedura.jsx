@@ -27,6 +27,7 @@ function Procedura() {
 
   return (
     <Container>
+      <Link to="/mansioni"><Indietro/></Link>
       <Title>Procedura</Title>
       <Table>
         <BodyTable>
@@ -96,6 +97,7 @@ function Procedura() {
 export default Procedura;
 
 const Container = styled.div`
+  position: relative;
   padding: 0 30px;
   width: 100%;
   height: 100%;
@@ -103,6 +105,23 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
+`
+const Indietro = styled.div`
+    top: 20px;
+    left: 20px;
+    position:absolute;
+    width: 50px;
+    height:50px;
+    background-image: url("/icon/arrow_left.png");
+    image-rendering: pixelated;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+    &:hover{
+        filter: var(--main-filter);
+    }
 `
 const Title = styled.h1`
   margin: 30px;
