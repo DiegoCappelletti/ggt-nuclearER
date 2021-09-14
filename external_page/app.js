@@ -1,4 +1,16 @@
-let game = true;
+let gioco
+
+const url = 'http://localhost:5555/api/v1/gioco'
+game = function(){
+    fetch(url,{
+        method: 'GET',
+        headers: {"Content-Type": "application/json"}
+    })
+    .then(response => response.json())
+    .then(data => {
+        gioco = data.gioco
+    })
+};
 
 const startingMinute = 30;
 let time = startingMinute*60*1000;
@@ -11,7 +23,8 @@ const allarm = new Audio('./allarme.mp3')
 allarm.loop = true;
 
 function updateCountdown(){
-    if(game){
+    game()
+    if(gioco){
         let minutes = Math.floor((time/1000/60)%60);
         let second = Math.floor((time/1000)%60);
         let milli = time%1000;
@@ -24,7 +37,6 @@ function updateCountdown(){
             videoContainer.classList.remove('hidden');
             allarm.pause();
             video.play();
-            game=false;
         }
 
         countdownEl.innerHTML = `${minutes<10? '0'+minutes: minutes}:${second<10? '0'+second: second}:${milli/10}`;

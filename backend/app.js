@@ -6,6 +6,7 @@ const routerApp = express.Router();
 let stato = "ATTIVO";
 let domanda = false;
 let protocollo = false;
+let gioco = true;
 
 //richiesta dati della pagina iniziale
 routerApp.get('/inizio', function(req,res){
@@ -75,7 +76,8 @@ routerApp.get('/stato', function(req,res){
     res.status(200).json({ 
         stato: stato,
         domanda: domanda,
-        protocollo: protocollo
+        protocollo: protocollo,
+        gioco: gioco
     });
 });
 
@@ -94,16 +96,24 @@ routerApp.get('/convalida', function(req,res){
     protocollo = true
     res.status(200).json({protocollo:protocollo})
 });
+//modifica gioco
+
+//richiesta fine gioco
+routerApp.get('/gioco', function(req,res){
+    res.status(200).json({gioco:gioco})
+});
 
 //reset stati
 routerApp.get('/reset', function(req,res){
     stato = "ATTIVO";
     domanda = false;
     protocollo = false;
+    gioco = true;
     res.status(200).json({
         stato: stato,
         domanda: domanda,
-        protocollo: protocollo
+        protocollo: protocollo,
+        gioco: gioco
     })
 });
 
